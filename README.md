@@ -3,4 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Diary Entry 0
 Cleaned up boilerplate, defined tailwind styling to a degree and started on the nav component
 
+## Diary Entry 1
+Installed MUI-base. Created nav dropdown component utilizing MUI, added to Nav component and made visible only at mobile device breakpoints. Created a data-int folder to better manage internal app data and limit code repetition/redundancy by rendering through mapping.
+
 

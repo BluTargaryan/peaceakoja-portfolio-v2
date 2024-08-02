@@ -11,7 +11,7 @@ const Nav = () => {
   
 
   return (
-    <nav className='flex bg-selfSecondary w-screen h-12 text-xl px-4 items-center justify-between text-selfPrimary relative lg:h-20'>
+    <nav className='flex bg-selfSecondary w-full h-12 text-xl px-4 items-center justify-between text-selfPrimary relative lg:h-20 lg:px-8'>
    <h1 className={`${lustria.className} text-xl lg:text-3xl`}>Peace</h1>
    <ul className='hidden text-xl gap-6 text-selfPrimary cursor-pointer lg:flex'>
    {menuList().map((item) => (

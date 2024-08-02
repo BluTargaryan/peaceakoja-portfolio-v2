@@ -15,7 +15,8 @@ const config: Config = {
       },
       colors:{
         selfPrimary: "#F2F2F2",
-        selfSecondary: "#0D0D0D"
+        selfSecondary: "#0D0D0D",
+        selfBlue:"#1D5479"
       }
     },
   },

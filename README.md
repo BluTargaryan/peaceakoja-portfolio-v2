@@ -9,4 +9,7 @@ Installed MUI-base. Created nav dropdown component utilizing MUI, added to Nav c
 ## Diary Entry 2
 Built the hero section for the home page, imported images in the public folder. 
 
+## Diary Entry 3
+Started projects section, implemented the projectsList as well as the expand on click function for each item
+
 

@@ -19,7 +19,7 @@ const HeroHome = () => {
     width="0"
     height="0"
     sizes="100vw"
-    className="w-5/6 h-auto md:w-3/5 lg:w-5/6"
+    className="h-4/5 w-auto"
     alt="boy working on his computer setup"
    />
     </div>

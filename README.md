@@ -15,4 +15,7 @@ Started projects section, implemented the projectsList as well as the expand on 
 ## Diary Entry 3.2
 Added the button and made the section responsive, mobile first
 
+## Diary Entry 4
+Added the scrolling text section, outlining name and role
+
 

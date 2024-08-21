@@ -18,4 +18,7 @@ Added the button and made the section responsive, mobile first
 ## Diary Entry 4
 Added the scrolling text section, outlining name and role
 
+## Diary Entry 4.1
+Added the about me section and made it responsive
+
 

@@ -8,7 +8,7 @@ import { lustria } from "@/app/layout"
 
 const HeroHome = () => {
   return (
-    <section className='w-full flex flex-col py-16 gap-16 items-center bg-transparent 
+    <header className='w-full flex flex-col py-16 gap-16 items-center bg-transparent 
     lg:flex-row-reverse lg:justify-between lg:px-8 
     xl:py-40 xl:gap-28'> 
     <div className='w-11/12 bg-selfBlue rounded-xl h-72 flex items-center justify-center border-2 border-selfSecondary
@@ -39,7 +39,7 @@ transition-all hover:pr-2 lg:w-[48%]'>
   </Button>
 </div>
 </div>
-    </section>
+    </header>
   )
 }
 

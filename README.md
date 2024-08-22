@@ -21,4 +21,7 @@ Added the scrolling text section, outlining name and role
 ## Diary Entry 4.1
 Added the about me section and made it responsive
 
+## Diary Entry 5
+Added the footer and made it responsive
+
 

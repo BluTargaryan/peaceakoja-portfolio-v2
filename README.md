@@ -22,6 +22,6 @@ Added the scrolling text section, outlining name and role
 Added the about me section and made it responsive
 
 ## Diary Entry 5
-Added the footer and made it responsive
+Added the footer, as well as contact and portfolio links,  and made it responsive
 
 

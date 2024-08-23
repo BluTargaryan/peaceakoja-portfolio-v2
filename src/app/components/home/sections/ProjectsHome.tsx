@@ -1,4 +1,6 @@
-import React from 'react'
+
+
+import React, {useRef} from 'react'
 import { Button } from '@mui/base/Button';
 import { MdArrowRightAlt } from "react-icons/md";
 
@@ -6,8 +8,9 @@ import { lustria } from "@/app/layout"
 import ProjectsList from '../subComps/ProjectsList'
 
 const ProjectsHome = () => {
+
   return (
-    <section className='py-16 flex flex-col items-center justify-center gap-10 xl:py-24'>
+    <section id='projects-homeSection' className='py-16 flex flex-col items-center justify-center gap-10 xl:py-24'>
 <div className="flex flex-col items-center gap-4">
   <h2 className={`${lustria.className} text-2xl xl:text-5xl`}>Projects</h2>
   <p className="text-base xl:text-2xl">Click an item to expand it</p>

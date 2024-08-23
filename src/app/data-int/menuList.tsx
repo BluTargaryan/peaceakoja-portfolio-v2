@@ -1,7 +1,7 @@
 export const menuList = ()=>{
     return[
-            { listName:'Home'},
-            { listName:'Projects'},
+            { listName:'Home', link:'/'},
+            { listName:'Projects', link:'/projects'},
           ]
 }
 

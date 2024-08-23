@@ -7,7 +7,7 @@ import Footer from "./components/home/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="w-full bg-selfPrimary">
+    <main className="w-full bg-selfPrimary overflow-x-hidden scroll-smooth">
       <HeroHome />
       <ProjectsHome />
       <ScrollingText />

@@ -39,7 +39,7 @@ const LinksList = () => {
 <Button className='hidden absolute bottom-0 left-0 h-14 w-full  items-center justify-between p-3 border-2 border-selfSecondary bg-selfPrimary text-selfSecondary rounded-xl
 transition-all duration-300 hover:pr-2 
 xl:group-hover:flex'>
-  Go to Projects
+  {item.title}
   <MdArrowRightAlt className='text-2xl xl:text-3xl'/> 
   </Button>
          </div>

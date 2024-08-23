@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 import PortCharHeader from '../../../../../public/port char at work.png'
-import { Button } from '@mui/base/Button';
-import { MdArrowRightAlt } from "react-icons/md";
+
 
 import { lustria } from "@/app/layout"
+import HeroButtonList from '../subComps/HeroButtonList'
 
 const HeroHome = () => {
   return (
@@ -28,16 +28,7 @@ const HeroHome = () => {
 lg:w-1/2
 xl:w-2/5'>
 <h1 className={`${lustria.className} text-4xl text-center w-full lg:text-left xl:text-6xl xl:leading-tight`}>Welcome to the portfolio of Peace Akoja</h1>
-<div className='flex flex-col gap-5 w-5/6 
-lg:w-full lg:flex-row lg:justify-between
-xl:text-xl'>
-<Button className='h-14 w-full flex items-center justify-center bg-selfSecondary text-selfPrimary rounded-xl lg:w-[48%]'>Continue</Button>
-<Button className='h-14 w-full flex items-center justify-between p-3 border-2 border-selfSecondary bg-transparent text-selfSecondary rounded-xl
-transition-all hover:pr-2 lg:w-[48%]'>
-  Go to Projects
-  <MdArrowRightAlt className='text-2xl xl:text-3xl'/> 
-  </Button>
-</div>
+<HeroButtonList />
 </div>
     </header>
   )

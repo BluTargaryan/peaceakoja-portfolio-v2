@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdMenu } from "react-icons/md";
+import Link from 'next/link';
 
 import NavDropdownMenu from './NavDropdownMenu';
 
@@ -15,8 +16,10 @@ const Nav = () => {
    <h1 className={`${lustria.className} text-xl lg:text-3xl`}>Peace</h1>
    <ul className='hidden text-xl gap-6 text-selfPrimary cursor-pointer lg:flex'>
    {menuList().map((item) => (
-             
-              <li key={item.listName} className='lg: font-normal'>{item.listName}</li>
+             <Link href={item.link} key={item.listName} >
+             <li className='lg: font-normal'>{item.listName}</li>
+             </Link>
+              
             ))}
    </ul>
    <div className='lg:hidden'>

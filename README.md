@@ -27,4 +27,7 @@ Added the footer, as well as contact and portfolio links,  and made it responsiv
 ## Diary Entry 5.1
 Added page transitions with framer motion, added projects page as well as styled the button states. 
 
+## Diary Entry 6
+Worked on projects page, utilized components from home page
+
 

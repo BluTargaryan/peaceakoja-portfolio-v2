@@ -41,8 +41,8 @@ const ProjectsList = () => {
           >
           <h3 className='text-2xl font-normal xl:text-5xl'>{project.name}</h3>
           <span className='flex gap-4 xl:text-2xl xl:gap-6'>
-          <a href={project.github} className='hover:border-b-2 '>Github</a>
-          <a href={project.site} className='hover:border-b-2 '>Website</a>
+          <a href={project.github} target="_blank" className='hover:border-b-2 '>Github</a>
+          <a href={project.site} target="_blank" className='hover:border-b-2 '>Website</a>
           </span>
           </div>
           </div>

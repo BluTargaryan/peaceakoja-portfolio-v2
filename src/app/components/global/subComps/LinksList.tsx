@@ -18,7 +18,7 @@ const LinksList = () => {
             const linkType = item.linkType;
           
             if (linkType === 'route') {
-              router.push(link);
+              window.open(link, '_blank', 'noopener,noreferrer');
             } else if (/^\+?[1-9]\d{1,14}$/.test(link)) { // Validate if link is a phone number
               window.location.href = `tel:${link}`;
             } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(link)) { // Validate if link is an email

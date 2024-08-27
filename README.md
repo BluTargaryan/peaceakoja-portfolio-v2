@@ -30,4 +30,7 @@ Added page transitions with framer motion, added projects page as well as styled
 ## Diary Entry 6
 Worked on projects page, utilized components from home page
 
+## Diary Entry 7
+Completed projects page (added projects list) and fixed button functions in home page. Set external navigation to open on new tab.
+
 

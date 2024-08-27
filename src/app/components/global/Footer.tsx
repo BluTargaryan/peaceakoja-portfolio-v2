@@ -5,7 +5,7 @@ import React from 'react'
 
 import { lustria } from "@/app/layout"
 import {linkData} from '@/app/data-int/links'
-import LinksList from '../subComps/LinksList'
+import LinksList from './subComps/LinksList'
 
 const Footer = () => {
    

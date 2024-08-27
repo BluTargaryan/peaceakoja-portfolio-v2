@@ -35,6 +35,6 @@ Completed projects page (added projects list) and fixed button functions in home
 Project now at shippable condition.
 
 ## Diary Entry 7.1
-Fixed link issue in projects section of home page
+Fixed link issue in projects section of home page, refactored button as its own component
 
 

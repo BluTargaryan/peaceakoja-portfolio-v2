@@ -34,4 +34,7 @@ Worked on projects page, utilized components from home page
 Completed projects page (added projects list) and fixed button functions in home page. Set external navigation to open on new tab. 
 Project now at shippable condition.
 
+## Diary Entry 7.1
+Fixed link issue in projects section of home page
+
 

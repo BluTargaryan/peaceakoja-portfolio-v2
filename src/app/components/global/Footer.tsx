@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-import { lustria } from "@/app/layout"
+import { lustria } from "@/app/utils"
 import {linkData} from '@/app/data-int/links'
 import LinksList from './subComps/LinksList'
 

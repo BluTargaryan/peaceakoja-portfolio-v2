@@ -4,7 +4,7 @@ import React, {useRef} from 'react'
 import { Button } from '@mui/base/Button';
 import { MdArrowRightAlt } from "react-icons/md";
 
-import { lustria } from "@/app/layout"
+import { lustria } from "@/app/utils"
 import ProjectsList from '../subComps/ProjectsList'
 
 const ProjectsHome = () => {

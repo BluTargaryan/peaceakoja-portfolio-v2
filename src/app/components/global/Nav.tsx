@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import NavDropdownMenu from './NavDropdownMenu';
 
-import { lustria } from "@/app/layout"
+import { lustria } from "@/app/utils"
 
 import menuList  from '@/app/data-int/menuList'; 
 

@@ -3,7 +3,7 @@ import React from 'react'
 import PortCharHeader from '../../../../../public/port char at work.png'
 
 
-import { lustria } from "@/app/layout"
+import { lustria } from "@/app/utils"
 import HeroButtonList from '../subComps/HeroButtonList'
 
 const HeroHome = () => {

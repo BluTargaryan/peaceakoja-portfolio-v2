@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import PortSystem from '../../../../../public/port asset sys.png'
 
-import { lustria } from "@/app/layout"
+import { lustria } from "@/app/utils"
 
 const HeroProjects = () => {
   return (

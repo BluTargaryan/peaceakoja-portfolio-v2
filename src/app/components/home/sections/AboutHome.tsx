@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { lustria } from "@/app/layout"
+import { lustria } from "@/app/utils"
 
 import BobbleHead from '../../../../../public/profile image.png'
 import PortCharEd from '../../../../../public/port char at work 1.png'

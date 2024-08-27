@@ -8,7 +8,7 @@ const lato = Lato({
   subsets:['latin']
 });
 
-export const lustria = Lustria({
+const lustria = Lustria({
   weight: ["400"],
   subsets:['latin']
 });

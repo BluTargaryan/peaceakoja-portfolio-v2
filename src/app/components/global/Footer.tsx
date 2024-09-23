@@ -15,7 +15,7 @@ const Footer = () => {
         <h2 className={`${lustria.className} text-2xl xl:text-5xl`}>Links</h2>
         <LinksList />
 
-        <p className='xl:text-2xl'>Painted by Peace</p>
+        <p className='xl:text-2xl'>Built by Peace</p>
     </footer>
   )
 }

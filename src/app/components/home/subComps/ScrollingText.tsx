@@ -35,7 +35,7 @@ const ScrollingText = () => {
     >
 {Array.from({ length: 20 }, (_, index) => (
   <span key={index} className="h-full w-fit flex items-center justify-center gap-4">
-    <p className='whitespace-nowrap flex-shrink-0 xl:text-5xl'>Frontend Developer</p>
+    <p className='whitespace-nowrap flex-shrink-0 xl:text-5xl'>Software Developer</p>
     {index < 19 && <GoDotFill className="text-base  xl:text-2xl" />}
   </span>
 ))}

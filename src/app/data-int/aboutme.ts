@@ -18,6 +18,7 @@ export const aboutMe = [
           roles:[
               {title:"Masters in Computer Science", location:"Coventry University", dateRange:"(2023 - 2024)"},
               {title:"Bachelors in Computer Science", location:"Redeemer's University", dateRange:"(2016 - 2020)"},
+              {title:"AWS Certified Cloud Practitioner", location:"AWS", dateRange:"(2025)"},
               {title:"IBM Frontend Developer Professional Certificate", location:"Coursera", dateRange:"(2024)"},
           ]
         },

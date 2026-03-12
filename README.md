@@ -1,40 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Purpose is to build a portfolio web app for Peace Akoja, showcasing his past work and expertise. It is the second version fo the uncompleted first portfolio project, with this aiming to incorporate mobile first design.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Diary Entry 0
-Cleaned up boilerplate, defined tailwind styling to a degree and started on the nav component
+## Getting Started
 
-## Diary Entry 1
-Installed MUI-base. Created nav dropdown component utilizing MUI, added to Nav component and made visible only at mobile device breakpoints. Created a data-int folder to better manage internal app data and limit code repetition/redundancy by rendering through mapping.
+First, run the development server:
 
-## Diary Entry 2
-Built the hero section for the home page, imported images in the public folder. 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Diary Entry 3
-Started projects section, implemented the projectsList as well as the expand on click function for each item
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Diary Entry 3.2
-Added the button and made the section responsive, mobile first
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Diary Entry 4
-Added the scrolling text section, outlining name and role
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Diary Entry 4.1
-Added the about me section and made it responsive
+## Learn More
 
-## Diary Entry 5
-Added the footer, as well as contact and portfolio links,  and made it responsive
+To learn more about Next.js, take a look at the following resources:
 
-## Diary Entry 5.1
-Added page transitions with framer motion, added projects page as well as styled the button states. 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Diary Entry 6
-Worked on projects page, utilized components from home page
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Diary Entry 7
-Completed projects page (added projects list) and fixed button functions in home page. Set external navigation to open on new tab. 
-Project now at shippable condition.
+## Deploy on Vercel
 
-## Diary Entry 7.1
-Fixed link issue in projects section of home page, refactored button as its own component
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

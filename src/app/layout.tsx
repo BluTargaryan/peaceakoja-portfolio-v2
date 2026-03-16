@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import {Orbitron, Inter} from "next/font/google";
 import "./globals.css";
-import WallpaperBackground from "./components/WallpaperBackground";
+import WallpaperBackground from "./components/atoms/WallpaperBackground";
+import Nav from "./components/sections/Nav";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -24,12 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full w-full">
       <body
-        className={`${orbitron.variable} ${inter.variable} antialiased`}
+        className={`${orbitron.variable} ${inter.variable} antialiased
+          px-4 py-22 
+          h-full w-full overflow-hidden box-border 
+          `}
       >
         <WallpaperBackground />
-        {children}
+        <main className="w-full h-full bg-background border-3 border-text flex flex-col">
+          <Nav />
+          {children}
+        </main>
       </body>
     </html>
   );

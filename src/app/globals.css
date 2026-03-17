@@ -30,3 +30,12 @@ body {
   color: var(--text);
   font-family: var(--font-inter);
 }
+
+
+h1{
+  @apply text-3xl font-orbitron font-bold;
+}
+
+p{
+  @apply tracking-wider
+}

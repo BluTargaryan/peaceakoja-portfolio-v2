@@ -14,15 +14,15 @@ const Nav = () => {
         },
         {
             name: 'Works',
-            link: '/about'
+            link: '/works'
         },
         {
             name: 'History',
-            link: '/projects'
+            link: '/history'
         },
         {
             name: 'Links',
-            link: '/contact'
+            link: '/links'
         }
     ]
   return (

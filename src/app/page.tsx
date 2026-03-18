@@ -23,7 +23,7 @@ export default async function Home() {
     "I'm a frontend engineer with a passion for building user-friendly and efficient web applications. I'm a quick learner and I'm always looking for new challenges.";
 
   return (
-   <div className="flex flex-col items-center h-full w-full py-23 gap-6.5 overflow-y-scroll">
+   <main className="flex flex-col items-center h-full w-full py-23 gap-6.5 overflow-y-scroll">
    
     <section className="p-2.5 border-3 border-text w-[250px] h-[289px]">
       <Image 
@@ -42,6 +42,6 @@ export default async function Home() {
   {bio}
 </p>
 
-   </div>
+   </main>
   );
 }

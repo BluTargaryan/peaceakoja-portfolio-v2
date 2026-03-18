@@ -33,10 +33,10 @@ export default function RootLayout({
           `}
       >
         <WallpaperBackground />
-        <main className="w-full h-full bg-background border-3 border-text flex flex-col">
+        <div className="w-full h-full bg-background border-3 border-text flex flex-col">
           <Nav />
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );

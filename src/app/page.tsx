@@ -1,26 +1,12 @@
 import Image from "next/image";
 import subjectMobile from "@/app/assets/images/subject-mobile.png";
-import { fetchSheet } from "@/app/lib/fetchSheet";
+import introData from "@/app/data/intro.json";
 
-export default async function Home() {
-  const url = process.env.SHEETS_INTRO_URL;
-  const intro = url ? await fetchSheet(url) : [];
-  const first = intro[0] ?? {};
-
-  const name =
-    first.name ??
-    first.Name ??
-    "Peace Akoja";
-
-  const role =
-    first.title ??
-    first.Title ??
-    "Frontend Engineer";
-
-  const bio =
-    first.Content??
-    first.content ??
-    "I'm a frontend engineer with a passion for building user-friendly and efficient web applications. I'm a quick learner and I'm always looking for new challenges.";
+export default function Home() {
+  const first = introData[0] ?? {};
+  const name = first.name ?? "Peace Akoja";
+  const role = first.title ?? "Frontend Engineer";
+  const bio = first.content ?? "";
 
   return (
    <main className="flex flex-col items-center h-full w-full py-23 gap-6.5 overflow-y-scroll">

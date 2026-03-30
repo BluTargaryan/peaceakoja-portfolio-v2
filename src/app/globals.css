@@ -41,5 +41,9 @@ h3{
 }
 
 p{
-  @apply tracking-wider
+  @apply tracking-wider whitespace-pre-wrap;
+}
+
+button{
+  @apply cursor-pointer;
 }

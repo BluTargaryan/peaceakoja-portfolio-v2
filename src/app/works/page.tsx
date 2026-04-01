@@ -18,7 +18,7 @@ const Works = () => {
   return (
     <main className="flex flex-col items-center h-full w-full py-23 overflow-y-scroll">
 
-<section className="flex flex-col items-center text-center w-[260px] mb-40 gap-4">
+<section className="flex flex-col items-center text-center w-[260px] mb-12 gap-4">
 <h1>Works</h1>
 <p>Live websites I have worked on, associated links and a brief description of what I did.</p>
 </section>

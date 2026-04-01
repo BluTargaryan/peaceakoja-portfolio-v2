@@ -1,6 +1,7 @@
 [
     {
         "name": "IIMO",
+        "image": "iimo.png",
         "links": [
             {
                 "name": "Website",
@@ -19,6 +20,7 @@
     },
     {
         "name": "Statify-MMA",
+        "image": "statify.png",
         "links": [
             {
                 "name": "Website",
@@ -30,9 +32,72 @@
             },
             {
                 "name": "Dribbble",
-                "url": "https://dribbble.com/shots/27207812-IIMO-Rights-Management-App-Concept-Design"
+                "url": "https://dribbble.com/shots/27230160-Statify-MMA-case-study"
             }
         ],
         "description": "IIMO is a full-stack platform I designed and built to help photographers manage their business end-to-end.\n\n  It covers shoot lifecycle management (active → expiring → expired → archived), client organisation, photo uploads with automatic watermark compositing, usage rights definition with contract PDF uploads, and secure shareable preview links for clients.\n\n I also built an in-app notification system for expiring rights and a public shoot preview page that works without a login. The stack is Next.js 16 (App Router), TypeScript, Tailwind CSS 4, and Supabase for the database, auth, and file storage."
+    },
+    {
+        "name": "Artbox Studio",
+        "image": "artbox.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://www.artbox-studio.com/"
+            }
+        ],
+        "description": "For version 2 of artbox-site, I built a modern website using Next.js 15, React 19, and Tailwind CSS v4. Here's what I did:\n\nTechnical build — I set up a TypeScript component-based architecture with a responsive UI, mobile navigation with dropdowns, smooth animations, and dark/light mode support.\n\nDeveloper documentation — I wrote comprehensive guides to help developers transition from vanilla JS to React, including JSX explanations, side-by-side code comparisons, and practical examples for common patterns.\n\nDevelopment standards — I established a structured Git workflow with branching rules (no direct commits to main), TypeScript conventions, mobile-first testing practices, and clear npm scripts for day-to-day development.\n\nMy main focus was on onboarding and code quality — making it easy for new developers to get up to speed while keeping the codebase maintainable."
+    },
+    {
+        "name": "3D Demos",
+        "image": "3d.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://threefiber-udemy-2025-learn.vercel.app/"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/BluTargaryan/3d-three-2025-demo"
+            }
+        ],
+        "description": "A portfolio of 10 isolated 3D demos built with React Three Fiber and Next.js 15, each showcasing a distinct real-world technique used in production 3D web experiences.\n\nHighlights include:\n\nScroll-driven 3D animation using GSAP ScrollTrigger — synchronizing camera movement and mesh rotation with user scroll for a campaign-style narrative feel\nGLTF/GLB model loading with Draco compression, contact shadows, and runtime model switching\nPer-material colour customisation on a real shoe model using Leva GUI controls\nHTML annotations overlaid on 3D objects in world space\nPointer-based camera lerp rig and keyboard-driven scene navigation"
+
+
+    },
+    {
+        "name": "Houzen",
+        "image": "houzen.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://chimerical-heliotrope-c86ee1.netlify.app/"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/BluTargaryan/Houzen"
+            }
+        ],
+        "description": "Here's what I did on Houzen:\n\nTechnical build — I built a promotional website using React (bootstrapped with Create React App), written in JavaScript. I implemented a fully responsive layout, adapting a desktop-only design to work across all screen sizes — including designing the mobile experience myself since no mobile mockup was provided.\n\nFeatures built — I developed a dual-purpose site covering app promotion with download links, app feature information, and a dedicated company information page."
+    },
+    {
+        "name": "Dimensional",
+        "image": "dimensional.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://dashing-begonia-2e335d.netlify.app/"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/BluTargaryan/Dimensional"
+            },
+            {
+                "name": "Dribbble",
+                "url": "https://dribbble.com/shots/21279932-Design-dump-for-Dimensional-App"
+            }
+        ],
+        "description": " I built a React app that integrates with the TMDB (The Movie Database) API to fetch live movie data. I implemented an API call to retrieve the top 5 upcoming movies and built a slideshow/carousel component within the UI to display them dynamically."
     }
+    
 ]

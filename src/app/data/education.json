@@ -1,0 +1,21 @@
+[
+    {
+        "name": "IIMO",
+        "image": "iimo.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://iimo-xahs.vercel.app/"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/BluTargaryan/iimo"
+            },
+            {
+                "name": "Dribbble",
+                "url": "https://dribbble.com/shots/27207812-IIMO-Rights-Management-App-Concept-Design"
+            }
+        ],
+        "description": "IIMO is a full-stack platform I designed and built to help photographers manage their business end-to-end.\n\n  It covers shoot lifecycle management (active → expiring → expired → archived), client organisation, photo uploads with automatic watermark compositing, usage rights definition with contract PDF uploads, and secure shareable preview links for clients.\n\n I also built an in-app notification system for expiring rights and a public shoot preview page that works without a login. The stack is Next.js 16 (App Router), TypeScript, Tailwind CSS 4, and Supabase for the database, auth, and file storage."
+    }
+]

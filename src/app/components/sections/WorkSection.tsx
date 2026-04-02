@@ -81,7 +81,7 @@ const WorkSection = () => {
   return (
     <section className="flex flex-col items-center text-center gap-9 w-[260px] ">
 
-    <div className="flex flex-col items-center text-center gap-9 w-full ">
+   
       <div className="flex flex-col items-center text-center gap-9 w-full ">
         
         <div id="work-slideshow" className="w-full h-[447px] flex flex-col gap-12 ">
@@ -169,7 +169,7 @@ const WorkSection = () => {
         <h3>Work done</h3>
         <p className="whitespace-pre-line">{active.description}</p>
       </div>
-    </div>
+  
 
 </section>
   )

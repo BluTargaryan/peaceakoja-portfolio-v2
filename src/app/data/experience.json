@@ -1,0 +1,47 @@
+[
+    {
+      "title": "Developer",
+      "body": "First Guide Limited",
+      "type": "Full-time",
+      "location": "Remote",
+      "duration": "Sep 2025 - Present",
+      "image": "firstguide.png",
+      "skills": "Translating designs into responsive, performant, and accessible web interfaces. Collaborating closely with the designer to bridge the gap between design intent and technical execution, ensuring consistency and quality across the product."
+    },
+    {
+      "title": "Web Developer",
+      "body": "Artbox Studio",
+      "type": "Full-time",
+      "location": "Remote",
+      "duration": "Apr 2024 - Sep 2025",
+      "image": "artbox.png",
+      "skills": "Translated client operational needs into scalable UI workflows for small businesses and creative teams. Designed and shipped custom dashboards, landing pages, and workflow tools while improving performance and accessibility across client applications."
+    },
+    {
+      "title": "Frontend Developer",
+      "body": "TheITApprentice",
+      "type": "Full-time",
+      "location": "Remote, United Kingdom",
+      "duration": "Jun 2024 - Jan 2025",
+      "image": "theitapprentice.png",
+      "skills": "Built responsive SaaS interfaces and designed reusable component systems that improved development speed and UI consistency. Collaborated with cross-functional teams to streamline product delivery across web and mobile applications."
+    },
+    {
+      "title": "Web Designer & Manager",
+      "body": "RCCG Holy Ghost Zone Coventry",
+      "type": "Part-time",
+      "location": "Hybrid, Coventry",
+      "duration": "Jan 2023 - Jan 2025",
+      "image": "rccg.png",
+      "skills": "Modernised an existing platform by rebuilding the site architecture for faster content updates and better UX. Implemented SEO and accessibility upgrades that improved usability and search visibility, while coordinating design-to-content workflows across teams."
+    },
+    {
+      "title": "Freelance Web Developer",
+      "body": "Self-employed",
+      "type": "Freelance",
+      "location": "Remote",
+      "duration": "2022 - 2023",
+      "image": "freelance.png",
+      "skills": "Designed and developed client websites and personal projects end-to-end. Worked across the full stack using React.js for interfaces, Firebase and Supabase for backend and data, and Figma for design — building a strong foundation in taking products from concept to deployment."
+    }
+  ]

@@ -1,21 +1,80 @@
 [
     {
-        "name": "IIMO",
-        "image": "iimo.png",
-        "links": [
-            {
-                "name": "Website",
-                "url": "https://iimo-xahs.vercel.app/"
-            },
-            {
-                "name": "Github",
-                "url": "https://github.com/BluTargaryan/iimo"
-            },
-            {
-                "name": "Dribbble",
-                "url": "https://dribbble.com/shots/27207812-IIMO-Rights-Management-App-Concept-Design"
-            }
-        ],
-        "description": "IIMO is a full-stack platform I designed and built to help photographers manage their business end-to-end.\n\n  It covers shoot lifecycle management (active → expiring → expired → archived), client organisation, photo uploads with automatic watermark compositing, usage rights definition with contract PDF uploads, and secure shareable preview links for clients.\n\n I also built an in-app notification system for expiring rights and a public shoot preview page that works without a login. The stack is Next.js 16 (App Router), TypeScript, Tailwind CSS 4, and Supabase for the database, auth, and file storage."
+      "title": "Master of Science - Computer Science",
+      "date": "2024",
+      "body": "Coventry University",
+      "image": "coventry.png",
+      "links": [
+        {
+          "name": "Credential",
+          "url": "https://drive.google.com/file/d/1Vhnd0jj-Lj_zait0cheaH42HQ3bAwQUk/view?usp=drive_link"
+        }
+      ],
+      "skills": "Built and shipped full-stack web applications using React and Spring Boot, and integrated a machine learning sales prediction model with scikit-learn. Led a Scrum team to deliver a task management system managed via Azure DevOps. My final research project was an accessibility-focused school learning system built with Next.js, Prisma, and Figma — directly shaping how I approach inclusive, user-centred frontend development."
+    },
+    {
+      "title": "Bachelor's Degree - Computer Science",
+      "date": "2020",
+      "body": "Redeemer's University",
+      "image": "redeemers.png",
+      "links": [
+        {
+          "name": "Credential",
+          "url": "https://drive.google.com/file/d/1aI4EWv-vPommOvf1weeHmNrokoGFmn4-/view?usp=sharing"
+        }
+      ],
+      "skills": "Built the fundamentals that underpin everything I build today — OOP, data structures, algorithms, database design, and web development. Studying Human-Computer Interaction and completing a final year project on a role-based information system grounded my frontend thinking in user needs from early on."
+    },
+    {
+      "title": "Google UX Design",
+      "date": "2026",
+      "body": "Google",
+      "image": "google.png",
+      "links": [
+        {
+          "name": "Credential",
+          "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/GGVZDB1441IO"
+        }
+      ],
+      "skills": "Worked through the full design process — user research, wireframing, prototyping, and usability testing. Gave me a structured and repeatable framework for design decisions I now apply directly when scoping and building interfaces."
+    },
+    {
+      "title": "AWS Certified AI Practitioner",
+      "date": "2025",
+      "body": "Amazon Web Services (AWS)",
+      "image": "aws.png",
+      "links": [
+        {
+          "name": "Credential",
+          "url": "https://www.credly.com/badges/5369c4e2-a9f1-4442-8a2e-f1f2b3ee9c00"
+        }
+      ],
+      "skills": "Gained a working understanding of AI and ML services on AWS — covering model types, use cases, and responsible AI principles. Helps me make informed decisions when integrating AI-powered features into products."
+    },
+    {
+      "title": "AWS Certified Cloud Practitioner",
+      "date": "2025",
+      "body": "Amazon Web Services (AWS)",
+      "image": "aws.png",
+      "links": [
+        {
+          "name": "Credential",
+          "url": "https://www.credly.com/badges/0ff36ef1-33e8-47c3-98b3-bedb1f5c6142"
+        }
+      ],
+      "skills": "Learned the core pillars of cloud architecture — compute, storage, networking, and security on AWS. Gives me the foundation to deploy, scale, and reason about the infrastructure my frontend applications run on."
+    },
+    {
+      "title": "IBM Front-End Developer",
+      "date": "2024",
+      "body": "IBM",
+      "image": "ibm.png",
+      "links": [
+        {
+          "name": "Credential",
+          "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/N36E4S2ZEQPZ"
+        }
+      ],
+      "skills": "Completed IBM's front-end developer programme covering React.js, component architecture, and modern UI patterns. Reinforced best practices I already use in production and sharpened how I structure scalable component systems."
     }
-]
+  ]

@@ -4,6 +4,7 @@ import Image from "next/image";
 import wwwIcon from "@/app/assets/images/www-icon.svg";
 import githubIcon from "@/app/assets/images/github-icon.svg";
 import dribbbleIcon from "@/app/assets/images/dribbble-icon.svg";
+import badge from "@/app/assets/images/badgeVerified.svg";
 
 type WorkLinkButtonProps = {
   name: string;
@@ -14,6 +15,7 @@ const ICON_MAP: Record<string, { src: string; alt: string }> = {
   Website: { src: wwwIcon, alt: "Website" },
   Github: { src: githubIcon, alt: "GitHub" },
   Dribbble: { src: dribbbleIcon, alt: "Dribbble" },
+  Credential: { src: badge, alt: "Credential" },
 };
 
 const WorkLinkButton = ({ name, url }: WorkLinkButtonProps) => {
@@ -28,7 +30,7 @@ const WorkLinkButton = ({ name, url }: WorkLinkButtonProps) => {
       {name}
       {icon && (
         <Image src={icon.src} alt={icon.alt} width={16} height={16} 
-        className="w-5 h-auto"
+        className={`${name === "Credential" ? "w-4 h-4" : "w-5 h-auto"}`}
         />
       )}
     </button>

@@ -1,27 +1,31 @@
 'use client';
-import educationData from "@/app/data/education.json";
-import WorkLinkButton from "@/app/components/atoms/WorkLinkButton";
+import skillsData from "@/app/data/skills.json";
 import Image, { StaticImageData } from "next/image";
-import coventry from "@/app/assets/images/education/coventry.png";
-import redeemers from "@/app/assets/images/education/redeemers.png";
-import google from "@/app/assets/images/education/google.png";
-import aws from "@/app/assets/images/education/aws.png";
-import ibm from "@/app/assets/images/education/ibm.png";
+import figma from "@/app/assets/images/skills/Figma.png";
+import nextjs from "@/app/assets/images/skills/Next.js.png";
+import reactjs from "@/app/assets/images/skills/React.png";
+import supabase from "@/app/assets/images/skills/Supabase.png";
+import firebase from "@/app/assets/images/skills/Firebase.png";
+import nodejs from "@/app/assets/images/skills/Node.png";
+import vercel from "@/app/assets/images/skills/Vercel.png";
+import aws from "@/app/assets/images/skills/AWS.png";
 import { useState, useRef, useEffect, useCallback } from "react";
 import MaskIcon from "../atoms/MaskIcon";
-import badge from "@/app/assets/images/badgeVerified.svg";
 import arrow from "@/app/assets/images/arrow.svg";
 
 const IMAGE_MAP: Record<string, StaticImageData> = {
-  "coventry.png": coventry,
-  "redeemers.png": redeemers,
-  "google.png": google,
+  "figma.png": figma,
+  "nextjs.png": nextjs,
+  "reactjs.png": reactjs,
+  "supabase.png": supabase,
+  "firebase.png": firebase,
+  "nodejs.png": nodejs,
+  "vercel.png": vercel,
   "aws.png": aws,
-  "ibm.png": ibm,
 };
 
-const EducationSection = () => {
-  const [currentTitle, setCurrentTitle] = useState(educationData[0].title);
+const SkillsSection = () => {
+  const [currentName, setCurrentName] = useState(skillsData[0].name);
   const scrollRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -31,7 +35,7 @@ const EducationSection = () => {
     const containerRect = container.getBoundingClientRect();
     const containerCenter = containerRect.left + containerRect.width / 2;
 
-    let closest = educationData[0].title;
+    let closest = skillsData[0].name;
     let closestDist = Infinity;
 
     itemRefs.current.forEach((el, i) => {
@@ -41,11 +45,11 @@ const EducationSection = () => {
       const dist = Math.abs(itemCenter - containerCenter);
       if (dist < closestDist) {
         closestDist = dist;
-        closest = educationData[i].title;
+        closest = skillsData[i].name;
       }
     });
 
-    setCurrentTitle(closest);
+    setCurrentName(closest);
   }, []);
 
   const scrollItemToCenter = useCallback((i: number) => {
@@ -74,46 +78,50 @@ const EducationSection = () => {
   }, [updateCenteredItem]);
 
   const active =
-    educationData.find((e) => e.title === currentTitle) ?? educationData[0];
+    skillsData.find((e) => e.name === currentName) ?? skillsData[0];
   const currentIndex = Math.max(
     0,
-    educationData.findIndex((e) => e.title === currentTitle)
+    skillsData.findIndex((e) => e.name === currentName)
   );
-  const lastIndex = educationData.length - 1;
+  const lastIndex = skillsData.length - 1;
 
   return (
     <>
       <div className="flex flex-col items-center text-center gap-4 w-[260px] ">
-            <h2>Education</h2>
-            <p>Schools attended and qualifications achieved.</p>
+            <h2>Toolkit</h2>
+            <p>Tools and technologies I use to build products.</p>
         </div>
     <section className="flex flex-col items-center text-center gap-9 w-[260px] ">
       
   
         <div className="flex flex-col items-center text-center gap-9 w-full ">
           <div
-            id="education-slideshow"
-            className="w-full h-[447px] flex flex-col gap-12 "
+            id="skills-slideshow"
+            className="w-full h-[300px] flex flex-col gap-12"
           >
             <div
               ref={scrollRef}
-              className="relative w-full h-full flex items-center gap-6 overflow-x-scroll px-16 scroll-smooth snap-x snap-proximity"
+              className="relative w-full h-full flex items-center gap-12 overflow-x-scroll px-25 scroll-smooth snap-x snap-proximity"
             >
-              {educationData.map((entry, i) => (
+              {skillsData.map((entry, i) => (
                 <div
-                  key={`${entry.title}-${entry.date}`}
+                  key={entry.name}
                   ref={(el) => {
                     itemRefs.current[i] = el;
                   }}
-                  className={`w-40 h-56 border-3 shrink-0 snap-center transition-all duration-300 ${currentTitle === entry.title ? "border-accent p-2.5 scale-110" : "border-text scale-90"}`}
+                  className={`shrink-0 snap-center`}
                 >
                   {IMAGE_MAP[entry.image] && (
                     <Image
+                    key={entry.name}
+                    ref={(el) => {
+                      itemRefs.current[i] = el;
+                    }}
                       src={IMAGE_MAP[entry.image]}
-                      alt={entry.title}
+                      alt={entry.name}
                       width={260}
                       height={447}
-                      className="w-full h-full object-cover object-center"
+                      className={`w-auto transition-all duration-300 ${currentName === entry.name ? "h-30" : "h-15"}`}
                     />
                   )}
                 </div>
@@ -123,7 +131,7 @@ const EducationSection = () => {
             <div className="flex items-center justify-between w-full ">
               <button
                 type="button"
-                aria-label="Previous qualification"
+                aria-label="Previous skill"
                 disabled={currentIndex <= 0}
                 onClick={() => scrollItemToCenter(currentIndex - 1)}
                 className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity"
@@ -137,18 +145,18 @@ const EducationSection = () => {
               </button>
 
               <div className="flex items-center justify-center gap-3">
-                {educationData.map((entry, i) => (
+                {skillsData.map((entry, i) => (
                   <span
-                    key={`${entry.title}-${entry.date}-dot`}
+                    key={`${entry.name}-dot`}
                     onClick={() => scrollItemToCenter(i)}
-                    className={`w-3 h-3 cursor-pointer transition-all duration-300 ${currentTitle === entry.title ? "bg-accent" : "bg-text"}`}
+                    className={`w-3 h-3 cursor-pointer transition-all duration-300 ${currentName === entry.name ? "bg-accent" : "bg-text"}`}
                   />
                 ))}
               </div>
 
               <button
                 type="button"
-                aria-label="Next qualification"
+                aria-label="Next skill"
                 disabled={currentIndex >= lastIndex}
                 onClick={() => scrollItemToCenter(currentIndex + 1)}
                 className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity"
@@ -165,34 +173,16 @@ const EducationSection = () => {
 
           <div className="flex flex-col items-center text-center gap-9 w-full ">
             <div className="flex flex-col items-center text-center gap-4 w-full ">
-              <h3>Qualification</h3>
+              <h3>Tool</h3>
               <span className="text-xl font-orbitron font-bold text-primary">
-                {active.title}
+                {active.name}
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-4 w-full ">
-              <h3>Issuing institution</h3>
-              <span className="text-xl font-orbitron font-bold text-primary">
-              {active.body} ({active.date})
-              </span>
-            </div>
-            <div className="flex flex-col gap-4 w-50 justify-center">
-              <h3>Credentials</h3>
-              <div className="flex flex-col gap-3.5 w-full justify-between">
-                {active.links.map((link) => (
-                  <WorkLinkButton
-                    key={`${link.name}-${link.url}`}
-                    name={link.name}
-                    url={link.url}
-                  />
-                ))}
-              </div>
+              <h3>About</h3>
+              <p className="whitespace-pre-line">{active.description}</p>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center text-center gap-4 w-full ">
-          <h3>Highlights</h3>
-          <p className="whitespace-pre-line">{active.skills}</p>
         </div>
       
     </section>
@@ -200,4 +190,4 @@ const EducationSection = () => {
   );
 };
 
-export default EducationSection;
+export default SkillsSection;

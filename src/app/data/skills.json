@@ -1,0 +1,37 @@
+[
+    {
+      "name": "Figma",
+      "image": "figma.png",
+      "description": "My primary design tool. I use it to wireframe, prototype, and produce developer-ready designs — and to collaborate with designers to ensure what gets built matches the intent."
+    },
+    {
+      "name": "Next.js",
+      "image": "nextjs.png",
+      "description": "My main framework for production web applications. I use it for its file-based routing, server-side rendering, and performance optimisations — it's the backbone of most things I ship."
+    },
+    {
+      "name": "React.js",
+      "image": "reactjs.png",
+      "description": "The foundation of how I think about UI. I use React to build reusable, composable component systems that scale cleanly across projects of any size."
+    },
+    {
+      "name": "Supabase",
+      "image": "supabase.png",
+      "description": "My go-to for backend infrastructure on full-stack projects. I use it for database management, authentication, and file storage — most recently as the core backend for IIMO."
+    },
+    {
+      "name": "Node.js",
+      "image": "nodejs.png",
+      "description": "Used for building server-side logic and APIs. Gives me the ability to work across the full stack and understand the backend context that my frontend interfaces consume."
+    },
+    {
+      "name": "Vercel",
+      "image": "vercel.png",
+      "description": "My default deployment platform for Next.js projects. I use it for its seamless CI/CD pipeline, preview deployments, and edge network — it's how most of my projects go from code to live."
+    },
+    {
+      "name": "AWS",
+      "image": "aws.png",
+      "description": "Familiar with core AWS services through certification and practice — covering compute, storage, and cloud architecture. Gives me the context to deploy and reason about scalable cloud infrastructure beyond managed platforms."
+    }
+  ]

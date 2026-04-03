@@ -136,7 +136,7 @@ const ExperienceSection = () => {
                 />
               </button>
 
-              <div className="flex items-center justify-center gap-6">
+              <div className="flex items-center justify-center gap-3">
                 {experienceData.map((entry, i) => (
                   <span
                     key={`${entryKey(entry)}-dot`}

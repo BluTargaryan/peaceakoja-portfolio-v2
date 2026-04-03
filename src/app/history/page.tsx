@@ -1,5 +1,6 @@
 import EducationSection from "../components/sections/EducationSection";
 import ExperienceSection from "../components/sections/ExperienceSection";
+import SkillsSection from "../components/sections/SkillsSection";
 
 const History = () => {
 
@@ -16,11 +17,13 @@ const History = () => {
   <EducationSection />
   </div>
 
-  <div className="">
+  <div className="mb-20">
   <ExperienceSection />
   </div>
 
-
+  <div className="">
+  <SkillsSection />
+  </div>
 
     </main>
   )

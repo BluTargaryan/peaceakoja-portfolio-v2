@@ -120,7 +120,7 @@ const WorkSection = () => {
             />
           </button>
 
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-3">
             {worksData.map((work, i) => (
               <span
                 key={work.name}

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Call me",
+    "icon": "/assets/images/Phone.svg",
+    "description": "Give me a call directly.",
+    "link": "tel:+4407538774045",
+    "linkText": "Call now"
+  },
+  {
+    "name": "Email",
+    "icon": "/assets/images/Email.svg",
+    "description": "Send me an email.",
+    "link": "mailto:opeyemiyolo@gmail.com",
+    "linkText": "Send email"
+  },
+  {
+    "name": "Dribbble",
+    "icon": "/assets/images/dribbble-icon.svg",
+    "description": "See my design work on Dribbble.",
+    "link": "https://dribbble.com/peaceakoja",
+    "linkText": "View profile"
+  },
+  {
+    "name": "GitHub",
+    "icon": "/assets/images/github-icon.svg",
+    "description": "Check out my code on GitHub.",
+    "link": "https://github.com/BluTargaryan",
+    "linkText": "View profile"
+  }
+]

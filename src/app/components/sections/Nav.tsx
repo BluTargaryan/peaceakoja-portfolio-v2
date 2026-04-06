@@ -21,8 +21,8 @@ const Nav = () => {
             link: '/history'
         },
         {
-            name: 'Links',
-            link: '/links'
+            name: 'Blog',
+            link: '/blog'
         }
     ]
   return (

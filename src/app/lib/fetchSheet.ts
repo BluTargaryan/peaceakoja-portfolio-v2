@@ -2,6 +2,14 @@ import Papa from "papaparse";
 
 export type SheetRow = Record<string, string>;
 
+export type ArticleRow = {
+  title: string;
+  date: string;
+  description: string;
+  docUrl: string;
+  image?: string;
+};
+
 export async function fetchSheet(url: string): Promise<SheetRow[]> {
   const res = await fetch(url);
 

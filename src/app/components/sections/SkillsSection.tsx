@@ -9,7 +9,7 @@ import firebase from "@/app/assets/images/skills/Firebase.png";
 import nodejs from "@/app/assets/images/skills/Node.png";
 import vercel from "@/app/assets/images/skills/Vercel.png";
 import aws from "@/app/assets/images/skills/AWS.png";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useLayoutEffect, useCallback } from "react";
 import MaskIcon from "../atoms/MaskIcon";
 import arrow from "@/app/assets/images/arrow.svg";
 
@@ -64,9 +64,10 @@ const SkillsSection = () => {
     container.scrollBy({ left: delta, behavior: "smooth" });
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     updateCenteredItem();
     container.addEventListener("scroll", updateCenteredItem, { passive: true });
     const ro = new ResizeObserver(() => updateCenteredItem());

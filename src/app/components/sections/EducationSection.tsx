@@ -7,9 +7,8 @@ import redeemers from "@/app/assets/images/education/redeemers.png";
 import google from "@/app/assets/images/education/google.png";
 import aws from "@/app/assets/images/education/aws.png";
 import ibm from "@/app/assets/images/education/ibm.png";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useLayoutEffect, useCallback } from "react";
 import MaskIcon from "../atoms/MaskIcon";
-import badge from "@/app/assets/images/badgeVerified.svg";
 import arrow from "@/app/assets/images/arrow.svg";
 
 const IMAGE_MAP: Record<string, StaticImageData> = {
@@ -60,9 +59,10 @@ const EducationSection = () => {
     container.scrollBy({ left: delta, behavior: "smooth" });
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     updateCenteredItem();
     container.addEventListener("scroll", updateCenteredItem, { passive: true });
     const ro = new ResizeObserver(() => updateCenteredItem());

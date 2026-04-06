@@ -8,7 +8,7 @@ import artbox from "@/app/assets/images/works/artbox.png";
 import threeD from "@/app/assets/images/works/3d.png";
 import houzen from "@/app/assets/images/works/houzen.png";
 import dimensional from "@/app/assets/images/works/dimensional.png";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useLayoutEffect, useCallback } from "react";
 import MaskIcon from "../atoms/MaskIcon";
 import arrow from "@/app/assets/images/arrow.svg";
 
@@ -61,9 +61,10 @@ const WorkSection = () => {
     container.scrollBy({ left: delta, behavior: "smooth" });
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     updateCenteredItem();
     container.addEventListener("scroll", updateCenteredItem, { passive: true });
     const ro = new ResizeObserver(() => updateCenteredItem());

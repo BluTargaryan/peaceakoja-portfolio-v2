@@ -23,10 +23,10 @@ function getOrientation(): "portrait" | "landscape" {
   return window.innerWidth < VIEWPORT_BREAKPOINT ? "portrait" : "landscape";
 }
 
-function getSize(): "regular" | "full" {
-  if (typeof window === "undefined") return "regular";
-  return window.innerWidth >= VIEWPORT_BREAKPOINT ? "full" : "regular";
-}
+// function getSize(): "regular" | "full" {
+//   if (typeof window === "undefined") return "regular";
+//   return window.innerWidth >= VIEWPORT_BREAKPOINT ? "full" : "regular";
+// }
 
 function applyBackground(url: string) {
   document.body.style.backgroundImage = `url(${url})`;

@@ -6,7 +6,7 @@ import artbox from "@/app/assets/images/experience/artbox.png";
 import theitapprentice from "@/app/assets/images/experience/theitapprentice.png";
 import rccg from "@/app/assets/images/experience/rccg.png";
 import freelance from "@/app/assets/images/experience/freelance.png";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useLayoutEffect, useCallback } from "react";
 import MaskIcon from "../atoms/MaskIcon";
 import arrow from "@/app/assets/images/arrow.svg";
 
@@ -61,9 +61,10 @@ const ExperienceSection = () => {
     container.scrollBy({ left: delta, behavior: "smooth" });
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     updateCenteredItem();
     container.addEventListener("scroll", updateCenteredItem, { passive: true });
     const ro = new ResizeObserver(() => updateCenteredItem());

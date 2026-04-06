@@ -38,3 +38,7 @@ yarn-error.log*
 
 # temp scaffold (remove after cleanup)
 temp-next/
+
+
+# legacy
+legacy/

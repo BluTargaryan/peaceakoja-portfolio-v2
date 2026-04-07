@@ -21,6 +21,7 @@ const GOOGLE_BOILERPLATE = [
   'Published using Google Docs',
   'Report abuse',
   'Updated automatically every 5 minutes',
+  'Learn more',
 ];
 
 export async function fetchDocHtml(docUrl: string): Promise<string> {

@@ -24,32 +24,39 @@ export default function Home() {
   return (
    <main className="flex flex-col items-center h-full w-full py-23 gap-12 overflow-y-scroll">
    
-   <section className="flex flex-col items-center text-center w-[260px] gap-4">
-    <div className="p-2.5 border-3 border-text w-[250px] h-[289px]">
+   <section className="flex flex-col items-center text-center w-[260px] gap-4
+   md:gap-12 md:w-[323px]
+   ">
+    <div className="p-2.5 border-3 border-text w-full h-[289px]
+    md:w-full md:h-[350px]
+    ">
       <Image 
       src={subjectMobile} 
-      alt="owner of portfolio" width={300} height={300} 
+      alt="owner of portfolio" width={600} height={600} 
       className="w-full h-full object-cover object-center border-3 border-text p-0"
       />
     </div>
+<div className="flex flex-col items-center gap-6 ">
+<div className="flex flex-col gap-2 text-center 
 
-<div className="flex flex-col gap-2 text-center w-[250px]">
+">
   <h1>{name}</h1>
   <span className="text-2xl font-orbitron font-semibold text-primary">{role}</span>
 </div>
 
-<p className="text-center w-[250px]">
+<p className="text-center">
   {bio}
 </p>
+</div>
 </section>
 
-<section className="flex flex-col items-center w-[260px] gap-4"> 
-<div className="flex flex-col items-center text-center w-[260px] gap-2">
+<section className="flex flex-col items-center w-[260px] gap-6 md:w-[323px]"> 
+<div className="flex flex-col items-center text-center gap-2">
 <h1>Links</h1>
 <p>Links to contact me or check out my work.</p>
 </div>
 
-<div className="flex flex-col items-center w-[260px] gap-3">
+<div className="flex flex-col items-center gap-3">
   {linksData.map((item) => (
     <LinkItem
       key={item.name}

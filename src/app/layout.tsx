@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className="h-full w-full">
       <body
         className={`${orbitron.variable} ${inter.variable} antialiased
-          px-4 py-11 md:py-22
+          px-4 py-11 md:px-10 
           h-full w-full overflow-hidden box-border 
           `}
       >

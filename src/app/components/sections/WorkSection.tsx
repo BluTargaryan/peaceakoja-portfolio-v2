@@ -80,22 +80,28 @@ const WorkSection = () => {
   const lastIndex = worksData.length - 1;
 
   return (
-    <section className="flex flex-col items-center text-center gap-9 w-[260px] ">
+    <section className="flex flex-col items-center text-center gap-9 w-full">
 
    
-      <div className="flex flex-col items-center text-center gap-9 w-full ">
+      <div className="flex flex-col items-center text-center gap-9 w-full 
+      md:gap-7
+      ">
         
-        <div id="work-slideshow" className="w-full h-[447px] flex flex-col gap-12 ">
+        <div id="work-slideshow" className="w-full h-[447px] flex flex-col ">
       
           <div
             ref={scrollRef}
-            className="relative w-full h-full flex items-center gap-6 overflow-x-scroll px-16 scroll-smooth snap-x snap-proximity"
+            className="relative w-full h-full flex items-center gap-6 overflow-x-scroll px-16 scroll-smooth snap-x snap-proximity
+            md:px-70 md:gap-10
+            "
           >
             {worksData.map((work, i) => (
               <div
                 key={work.name}
                 ref={(el) => { itemRefs.current[i] = el; }}
-                className={`w-40 h-56 border-3 shrink-0 snap-center transition-all duration-300 ${currentWork === work.name ? "border-accent p-2.5 scale-110" : "border-text scale-90"}`}
+                className={`w-40 h-56 border-3 shrink-0 snap-center transition-all duration-300 ${currentWork === work.name ? "border-accent p-2.5 scale-110" : "border-text scale-90"}
+                md:w-56 md:h-80
+                  `}
               >
                 {IMAGE_MAP[work.image] && (
                   <Image src={IMAGE_MAP[work.image]} alt={work.name} width={260} height={447} className="w-full h-full object-cover object-center" />
@@ -111,22 +117,26 @@ const WorkSection = () => {
             aria-label="Previous project"
             disabled={currentIndex <= 0}
             onClick={() => scrollItemToCenter(currentIndex - 1)}
-            className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity"
+            className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity
+            md:w-9 md:h-9
+            "
           >
             <MaskIcon
               src={arrow.src}
               alt=""
-              className="w-2 h-2 pointer-events-none"
+              className="w-2 h-2 pointer-events-none md:w-3 md:h-3"
               style={{ backgroundColor: "var(--background)" }}
             />
           </button>
 
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3 md:gap-6">
             {worksData.map((work, i) => (
               <span
                 key={work.name}
                 onClick={() => scrollItemToCenter(i)}
-                className={`w-3 h-3 cursor-pointer transition-all duration-300 ${currentWork === work.name ? "bg-accent" : "bg-text"}`}
+                className={`w-3 h-3 cursor-pointer transition-all duration-300 ${currentWork === work.name ? "bg-accent" : "bg-text"}
+                  md:w-5 md:h-5
+                  `}
               />
             ))}
           </div>
@@ -136,12 +146,13 @@ const WorkSection = () => {
             aria-label="Next project"
             disabled={currentIndex >= lastIndex}
             onClick={() => scrollItemToCenter(currentIndex + 1)}
-            className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity"
+            className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity 
+            md:w-9 md:h-9"
           >
             <MaskIcon
               src={arrow.src}
               alt=""
-              className="w-2 h-2 rotate-180 pointer-events-none"
+              className="w-2 h-2 rotate-180 pointer-events-none md:w-3 md:h-3"
               style={{ backgroundColor: "var(--background)" }}
             />
           </button>
@@ -149,12 +160,12 @@ const WorkSection = () => {
         </div>
         
 
-      <div className="flex flex-col items-center text-center gap-9 w-full ">
+      <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7">
         <div className="flex flex-col items-center text-center gap-4 w-full ">
           <h3>Project name</h3>
           <span className="text-xl font-orbitron font-bold text-primary">{active.name}</span>
         </div>
-        <div className="flex flex-col gap-4 w-50 justify-center">
+        <div className="flex flex-col gap-4 w-full justify-center">
           <h3>Project links</h3>
           <div className="flex flex-col gap-3.5 w-full justify-between">
             {active.links.map((link) => (
@@ -166,7 +177,7 @@ const WorkSection = () => {
 
 
       </div>
-      <div className="flex flex-col items-center text-center gap-4 w-full ">
+      <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] ">
         <h3>Work done</h3>
         <p className="whitespace-pre-line">{active.description}</p>
       </div>

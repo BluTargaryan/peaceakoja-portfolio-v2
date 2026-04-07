@@ -30,13 +30,16 @@ export default function LinkItem({
         type="button"
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className={`w-full h-10 flex items-center justify-between p-2.5 bg-secondary ${open ? "border-b-3 border-text" : ""}`}
+        className={`w-full h-10 flex items-center justify-between p-2.5 bg-secondary ${open ? "border-b-3 border-text" : ""}
+          hover:bg-background transition-all duration-300
+          md:h-12
+          `}
       >
         <span className="font-orbitron font-medium text-text">{name}</span>
         <MaskIcon
           src={headerIconSrc}
           alt={headerIconAlt}
-          className="w-5 h-5"
+          className="w-5 h-5 md:w-6 md:h-6"
           style={{ backgroundColor: "var(--text)" }}
         />
       </button>

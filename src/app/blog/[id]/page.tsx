@@ -34,20 +34,20 @@ const Article = async ({ params }: Props) => {
   return (
     <main className="flex flex-col items-center h-full w-full py-23 gap-8 overflow-y-scroll">
 
-      <section className="flex flex-col items-center text-center w-[260px] gap-2">
+      <section className="flex flex-col items-center text-center w-[260px] md:w-full md:px-20 gap-2">
         <h1>{row.title}</h1>
         <span className="text-sm text-text">{row.date}</span>
         <p>{row.description}</p>
       </section>
 
-      <section className="flex flex-col items-center text-center w-[260px] gap-4">
+      <section className="flex flex-col items-center text-center w-[260px] md:w-full md:px-20 gap-4">
 
       {cover ? (
        
           <Image
             src={cover}
             alt={row.title}
-            className="w-[260px] h-auto object-cover"
+            className="w-[260px] h-auto object-cover md:h-96 md:w-auto"
             width={260}
             height={260}
             priority
@@ -56,7 +56,7 @@ const Article = async ({ params }: Props) => {
       ) : null}
 
       <article
-        className="w-[260px] flex flex-col gap-4"
+        className="article w-[260px] md:w-full md:px-20 flex flex-col gap-4"
         dangerouslySetInnerHTML={{ __html: bodyHtml }}
       />
 

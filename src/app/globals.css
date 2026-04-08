@@ -51,3 +51,7 @@ p{
 button{
   @apply cursor-pointer;
 }
+
+.article a{
+  @apply text-primary underline hover:text-accent;
+}

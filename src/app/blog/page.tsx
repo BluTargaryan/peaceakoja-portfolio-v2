@@ -17,13 +17,16 @@ const Blog = async () => {
         <p>Articles I have written on technologies, practices and other topics related to frontend development.</p>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center w-[260px] gap-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[260px] gap-8
+      md:w-full md:px-20
+      ">
         {rows.length === 0 ? (
           <p className="text-text/60 text-sm">No articles yet.</p>
         ) : (
           rows.map((row) => (
             <ArticleItem
               key={slugify(`${row.title}-${row.date}`)}
+              className="col-span-1 row-span-1"
               title={row.title}
               date={row.date}
               description={row.description}

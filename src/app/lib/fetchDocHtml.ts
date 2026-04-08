@@ -43,6 +43,35 @@ export async function fetchDocHtml(docUrl: string): Promise<string> {
       a: ['href', 'target', 'rel'],
       img: ['src', 'alt', 'width', 'height'],
     },
+    transformTags: {
+      a: (tagName, attribs) => {
+        const href = attribs.href?.trim();
+        // Only force new-tab behavior for absolute http(s) links.
+        // Keep relative links, hash anchors, and mailto/tel behaving normally.
+        const isExternal =
+          !!href && (href.startsWith('https://') || href.startsWith('http://'));
+
+        if (!isExternal) return { tagName, attribs };
+
+        const relParts = new Set(
+          (attribs.rel ?? '')
+            .split(/\s+/)
+            .map((s) => s.trim())
+            .filter(Boolean)
+        );
+        relParts.add('noopener');
+        relParts.add('noreferrer');
+
+        return {
+          tagName,
+          attribs: {
+            ...attribs,
+            target: '_blank',
+            rel: Array.from(relParts).join(' '),
+          },
+        };
+      },
+    },
     // Strip all class/style/id from Google's markup so our CSS controls styling
     allowedClasses: {},
     exclusiveFilter: (frame) => {

@@ -93,6 +93,7 @@ const WorkSection = () => {
             ref={scrollRef}
             className="relative w-full h-full flex items-center gap-6 overflow-x-scroll px-16 scroll-smooth snap-x snap-proximity
             md:px-70 md:gap-10
+            lg:px-100
             "
           >
             {worksData.map((work, i) => (

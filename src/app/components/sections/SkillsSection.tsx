@@ -105,6 +105,7 @@ const SkillsSection = () => {
               ref={scrollRef}
               className="relative w-full h-full flex items-center gap-20 overflow-x-scroll px-30 scroll-smooth snap-x snap-proximity
               md:px-80 md:gap-32
+              lg:px-120
               "
             >
               {skillsData.map((entry, i) => (

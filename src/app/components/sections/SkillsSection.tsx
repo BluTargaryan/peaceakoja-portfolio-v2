@@ -64,6 +64,7 @@ const SkillsSection = () => {
     container.scrollBy({ left: delta, behavior: "smooth" });
   }, []);
 
+
   useLayoutEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -88,21 +89,23 @@ const SkillsSection = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center text-center gap-4 w-[260px] ">
+      <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] ">
             <h2>Toolkit</h2>
             <p>Tools and technologies I use to build products.</p>
         </div>
-    <section className="flex flex-col items-center text-center gap-9 w-[260px] ">
+    <section className="flex flex-col items-center text-center gap-9 w-full">
       
   
-        <div className="flex flex-col items-center text-center gap-9 w-full ">
+        <div className="flex flex-col items-center text-center gap-9 w-full md:gap-7">
           <div
             id="skills-slideshow"
-            className="w-full h-[300px] flex flex-col gap-12"
+            className="w-full h-[300px] flex flex-col md:h-[447px]"
           >
             <div
               ref={scrollRef}
-              className="relative w-full h-full flex items-center gap-12 overflow-x-scroll px-25 scroll-smooth snap-x snap-proximity"
+              className="relative w-full h-full flex items-center gap-20 overflow-x-scroll px-30 scroll-smooth snap-x snap-proximity
+              md:px-80 md:gap-32
+              "
             >
               {skillsData.map((entry, i) => (
                 <div
@@ -110,19 +113,15 @@ const SkillsSection = () => {
                   ref={(el) => {
                     itemRefs.current[i] = el;
                   }}
-                  className={`shrink-0 snap-center`}
+                  className={`shrink-0 snap-center h-15 transition-all duration-300 md:h-20 ${currentName === entry.name ? "scale-175" : ""}`}
                 >
                   {IMAGE_MAP[entry.image] && (
                     <Image
-                    key={entry.name}
-                    ref={(el) => {
-                      itemRefs.current[i] = el;
-                    }}
                       src={IMAGE_MAP[entry.image]}
                       alt={entry.name}
                       width={260}
                       height={447}
-                      className={`w-auto transition-all duration-300 ${currentName === entry.name ? "h-30" : "h-15"}`}
+                      className="w-auto h-full"
                     />
                   )}
                 </div>
@@ -135,22 +134,26 @@ const SkillsSection = () => {
                 aria-label="Previous skill"
                 disabled={currentIndex <= 0}
                 onClick={() => scrollItemToCenter(currentIndex - 1)}
-                className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity"
+                className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity
+                md:w-9 md:h-9
+                "
               >
                 <MaskIcon
                   src={arrow.src}
                   alt=""
-                  className="w-2 h-2 pointer-events-none"
+                  className="w-2 h-2 pointer-events-none md:w-3 md:h-3"
                   style={{ backgroundColor: "var(--background)" }}
                 />
               </button>
 
-              <div className="flex items-center justify-center gap-3">
+              <div className="flex items-center justify-center gap-3 md:gap-6">
                 {skillsData.map((entry, i) => (
                   <span
                     key={`${entry.name}-dot`}
                     onClick={() => scrollItemToCenter(i)}
-                    className={`w-3 h-3 cursor-pointer transition-all duration-300 ${currentName === entry.name ? "bg-accent" : "bg-text"}`}
+                    className={`w-3 h-3 cursor-pointer transition-all duration-300 ${currentName === entry.name ? "bg-accent" : "bg-text"}
+                    md:w-5 md:h-5
+                    `}
                   />
                 ))}
               </div>
@@ -160,19 +163,20 @@ const SkillsSection = () => {
                 aria-label="Next skill"
                 disabled={currentIndex >= lastIndex}
                 onClick={() => scrollItemToCenter(currentIndex + 1)}
-                className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity"
+                className="flex items-center justify-center w-6 h-6 bg-text shrink-0 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer hover:opacity-90 transition-opacity
+                md:w-9 md:h-9"
               >
                 <MaskIcon
                   src={arrow.src}
                   alt=""
-                  className="w-2 h-2 rotate-180 pointer-events-none"
+                  className="w-2 h-2 rotate-180 pointer-events-none md:w-3 md:h-3"
                   style={{ backgroundColor: "var(--background)" }}
                 />
               </button>
             </div>
           </div>
 
-          <div className="flex flex-col items-center text-center gap-9 w-full ">
+          <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7">
             <div className="flex flex-col items-center text-center gap-4 w-full ">
               <h3>Tool</h3>
               <span className="text-xl font-orbitron font-bold text-primary">

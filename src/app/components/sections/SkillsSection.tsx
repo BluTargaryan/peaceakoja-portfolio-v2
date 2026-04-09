@@ -104,7 +104,7 @@ const SkillsSection = () => {
               ref={scrollRef}
               className="relative w-full min-w-0 h-full flex items-center gap-6 overflow-x-scroll  scroll-smooth snap-x snap-proximity
               md:gap-10
-
+             xl:gap-40
               "
             >
               <div

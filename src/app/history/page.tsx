@@ -17,19 +17,19 @@ xl:w-[1144px] xl:items-start xl:mb-25
 </section>
 
 <div className="mb-20 w-full flex flex-col items-center
-xl:w-[1144px]
+xl:w-[1144px] xl:gap-16
 ">
   <EducationSection />
   </div>
 
   <div className="mb-20 w-full flex flex-col items-center
-  xl:w-[1144px]
+  xl:w-[1144px] xl:gap-16
   ">
   <ExperienceSection />
   </div>
 
   <div className="w-full flex flex-col items-center
-  xl:w-[1144px]
+  xl:w-[1144px] xl:gap-16
   ">
   <SkillsSection />
   </div>

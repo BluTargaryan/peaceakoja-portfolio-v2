@@ -12,13 +12,14 @@ const Blog = async () => {
   return (
     <main className="flex flex-col items-center h-full w-full py-23 gap-12 overflow-y-scroll">
 
-      <section className="flex flex-col items-center text-center w-[260px] gap-4">
+      <section className="flex flex-col items-center text-center w-[260px] gap-4 xl:w-[1144px] xl:items-start xl:text-left">
         <h1>Blog</h1>
         <p>Articles I have written on technologies, practices and other topics related to frontend development.</p>
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[260px] gap-8
       md:w-full md:px-20
+      xl:w-[1144px] xl:gap-16 xl:grid-cols-3 xl:px-0
       ">
         {rows.length === 0 ? (
           <p className="text-text/60 text-sm">No articles yet.</p>
@@ -26,7 +27,7 @@ const Blog = async () => {
           rows.map((row) => (
             <ArticleItem
               key={slugify(`${row.title}-${row.date}`)}
-              className="col-span-1 row-span-1"
+              className="col-span-1 row-span-1 xl:gap-4"
               title={row.title}
               date={row.date}
               description={row.description}

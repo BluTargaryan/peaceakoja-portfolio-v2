@@ -186,19 +186,19 @@ const ExperienceSection = () => {
           <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7 xl:w-[465px] xl:gap-10 xl:items-start xl:text-left">
             <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Role</h3>
-              <span className="text-xl font-orbitron font-bold text-primary">
+              <span className="text-xl font-orbitron font-bold text-primary xl:text-4xl">
                 {active.title}
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Organisation</h3>
-              <span className="text-xl font-orbitron font-bold text-primary">
+              <span className="text-xl font-orbitron font-bold text-primary xl:text-4xl">
                 {active.body}
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Engagement</h3>
-              <span className="text-xl font-orbitron font-medium text-primary">
+              <span className="text-xl font-orbitron font-bold text-primary xl:text-4xl">
                 {active.type} <br/>({active.location}, {active.duration})
               </span>
             </div>

@@ -173,11 +173,11 @@ xl:w-[1144px] xl:gap-25
         
 
       <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7 xl:w-[465px] xl:gap-10">
-        <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start">
+        <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
           <h3>Project name</h3>
-          <span className="text-xl font-orbitron font-bold text-primary">{active.name}</span>
+          <span className="text-xl font-orbitron font-bold text-primary xl:text-4xl">{active.name}</span>
         </div>
-        <div className="flex flex-col gap-4 w-full justify-center xl:items-start xl:gap-4">
+        <div className="flex flex-col gap-4 w-full justify-center xl:items-start xl:text-left xl:gap-4">
           <h3>Project links</h3>
           <div className="flex flex-col gap-3.5 w-full justify-between xl:flex-row xl:flex-wrap xl:items-start xl:gap-6.5 xl:justify-start">
             {active.links.map((link) => (

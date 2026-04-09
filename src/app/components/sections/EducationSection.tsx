@@ -184,15 +184,15 @@ const EducationSection = () => {
           </div>
 
           <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7 xl:w-[465px] xl:gap-10 xl:items-start xl:text-left">
-            <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start">
+            <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Qualification</h3>
-              <span className="text-xl font-orbitron font-bold text-primary">
+              <span className="text-xl font-orbitron font-bold text-primary xl:text-4xl">
                 {active.title}
               </span>
             </div>
-            <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start">
+            <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Issuing institution</h3>
-              <span className="text-xl font-orbitron font-bold text-primary">
+              <span className="text-xl font-orbitron font-bold text-primary xl:text-4xl">
               {active.body} ({active.date})
               </span>
             </div>

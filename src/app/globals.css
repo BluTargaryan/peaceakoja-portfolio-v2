@@ -33,7 +33,7 @@ body {
 
 
 h1{
-  @apply text-3xl font-orbitron font-bold md:text-4xl;
+  @apply text-3xl font-orbitron font-bold md:text-4xl xl:text-6xl;
 }
 
 h2{
@@ -45,7 +45,7 @@ h3{
 }
 
 p{
-  @apply tracking-wider whitespace-pre-wrap;
+  @apply tracking-wider whitespace-pre-wrap xl:text-2xl;
 }
 
 button{

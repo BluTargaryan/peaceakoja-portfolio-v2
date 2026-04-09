@@ -32,9 +32,10 @@ const Nav = () => {
                 href={item.link}
                 key={item.name}
                 className={`text-xs font-orbitron font-semibold w-full flex items-center justify-center
-                    ${menuList.indexOf(item) !== menuList.length - 1 ? "border-r-3 border-text" : ""}
+                    ${menuList.indexOf(item) !== menuList.length - 1 ? "border-r-3 border-text" : "xl:border-r-3 xl:border-text"}
                     ${item.link === pathname ? "bg-accent" : "bg-primary"} transition-all duration-300
                     md:text-sm
+                    xl:text-base xl:w-44
                     `}
             >
                 <span>{item.name}</span>

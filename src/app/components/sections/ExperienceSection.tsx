@@ -86,23 +86,28 @@ const ExperienceSection = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] ">
+      <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] xl:w-[1144px] xl:items-start xl:text-left">
         <h2>Experience</h2>
         <p>Where I have worked and the roles I have held.</p>
       </div>
-      <section className="flex flex-col items-center text-center gap-9 w-full">
-        <div className="flex flex-col items-center text-center gap-9 w-full md:gap-7">
+      <section className="flex flex-col items-center text-center gap-9 w-full xl:w-[1144px] xl:gap-25">
+        <div className="flex flex-col items-center text-center gap-9 w-full md:gap-7 xl:flex-row xl:gap-0 xl:justify-between">
           <div
             id="experience-slideshow"
-            className="w-full h-[447px] flex flex-col "
+            className="w-full h-[447px] flex flex-col xl:w-[581px] xl:h-[400px] min-w-0
+            "
           >
             <div
               ref={scrollRef}
-              className="relative w-full h-full flex items-center gap-6 overflow-x-scroll px-16 scroll-smooth snap-x snap-proximity
-              md:px-70 md:gap-10
-              lg:px-100
+              className="relative w-full min-w-0 h-full flex items-center gap-6 overflow-x-scroll  scroll-smooth snap-x snap-proximity
+              md:gap-10
+
               "
             >
+              <div
+                className="shrink-0 w-16 md:w-70 lg:w-100 xl:w-50"
+                aria-hidden
+              />
               {experienceData.map((entry, i) => (
                 <div
                   key={entryKey(entry)}
@@ -124,6 +129,10 @@ const ExperienceSection = () => {
                   )}
                 </div>
               ))}
+              <div
+                className="shrink-0 w-16 md:w-70 lg:w-100 xl:w-50"
+                aria-hidden
+              />
             </div>
 
             <div className="flex items-center justify-between w-full ">
@@ -174,20 +183,20 @@ const ExperienceSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7">
-            <div className="flex flex-col items-center text-center gap-4 w-full ">
+          <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7 xl:w-[465px] xl:gap-10 xl:items-start xl:text-left">
+            <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Role</h3>
               <span className="text-xl font-orbitron font-bold text-primary">
                 {active.title}
               </span>
             </div>
-            <div className="flex flex-col items-center text-center gap-4 w-full ">
+            <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Organisation</h3>
               <span className="text-xl font-orbitron font-bold text-primary">
                 {active.body}
               </span>
             </div>
-            <div className="flex flex-col items-center text-center gap-4 w-full ">
+            <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start xl:text-left">
               <h3>Engagement</h3>
               <span className="text-xl font-orbitron font-medium text-primary">
                 {active.type} <br/>({active.location}, {active.duration})
@@ -195,7 +204,7 @@ const ExperienceSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] ">
+        <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] xl:w-[1144px] xl:gap-10 xl:items-start xl:text-left">
           <h3>Highlights</h3>
           <p className="whitespace-pre-line">{active.skills}</p>
         </div>

@@ -25,8 +25,8 @@ const WorkLinkButton = ({ name, url }: WorkLinkButtonProps) => {
     <button
       onClick={() => window.open(url, "_blank")}
       className={`h-10  ${name === "Website" ? "bg-accent" : "bg-secondary"} font-orbitron font-semibold border-3 border-text px-3 py-1 hover:bg-background transition-all duration-300 flex items-center justify-between gap-1.5
-        
         md:h-14
+        xl:h-16 xl:w-52
         `}
     >
       

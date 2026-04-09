@@ -80,22 +80,29 @@ const WorkSection = () => {
   const lastIndex = worksData.length - 1;
 
   return (
-    <section className="flex flex-col items-center text-center gap-9 w-full">
+    <section className="flex flex-col items-center text-center gap-9 w-full
+xl:w-[1144px] xl:gap-25
+    ">
 
    
-      <div className="flex flex-col items-center text-center gap-9 w-full 
-      md:gap-7
+      <div className="flex flex-col items-center text-center gap-9 w-full min-w-0
+      md:gap-7 xl:flex-row xl:gap-0 xl:justify-between
       ">
         
-        <div id="work-slideshow" className="w-full h-[447px] flex flex-col ">
+        <div id="work-slideshow" className="w-full h-[447px] flex flex-col 
+        xl:w-[581px] xl:h-[400px] min-w-0
+        ">
       
           <div
             ref={scrollRef}
-            className="relative w-full h-full flex items-center gap-6 overflow-x-scroll px-16 scroll-smooth snap-x snap-proximity
-            md:px-70 md:gap-10
-            lg:px-100
+            className="relative w-full  h-full flex items-center gap-6 overflow-x-scroll scroll-smooth snap-x snap-proximity
+            md:gap-10
             "
           >
+            <div
+              className="shrink-0 w-16 md:w-70 lg:w-100 xl:w-50"
+              aria-hidden
+            />
             {worksData.map((work, i) => (
               <div
                 key={work.name}
@@ -109,6 +116,10 @@ const WorkSection = () => {
                 )}
               </div>
             ))}
+            <div
+              className="shrink-0 w-16 md:w-70 lg:w-100 xl:w-50"
+              aria-hidden
+            />
           </div>
 
           <div className="flex items-center justify-between w-full ">
@@ -161,14 +172,14 @@ const WorkSection = () => {
         </div>
         
 
-      <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7">
-        <div className="flex flex-col items-center text-center gap-4 w-full ">
+      <div className="flex flex-col items-center text-center gap-9 w-[260px] md:w-[323px] md:gap-7 xl:w-[465px] xl:gap-10">
+        <div className="flex flex-col items-center text-center gap-4 w-full xl:items-start">
           <h3>Project name</h3>
           <span className="text-xl font-orbitron font-bold text-primary">{active.name}</span>
         </div>
-        <div className="flex flex-col gap-4 w-full justify-center">
+        <div className="flex flex-col gap-4 w-full justify-center xl:items-start xl:gap-4">
           <h3>Project links</h3>
-          <div className="flex flex-col gap-3.5 w-full justify-between">
+          <div className="flex flex-col gap-3.5 w-full justify-between xl:flex-row xl:flex-wrap xl:items-start xl:gap-6.5 xl:justify-start">
             {active.links.map((link) => (
               <WorkLinkButton key={`${link.name}-${link.url}`} name={link.name} url={link.url} />
             ))}
@@ -178,7 +189,11 @@ const WorkSection = () => {
 
 
       </div>
-      <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] ">
+      
+      
+      
+      
+      <div className="flex flex-col items-center text-center gap-4 w-[260px] md:w-[323px] xl:w-[1144px] xl:gap-10 xl:items-start xl:text-left">
         <h3>Work done</h3>
         <p className="whitespace-pre-line">{active.description}</p>
       </div>

@@ -91,7 +91,7 @@ const ExperienceSection = () => {
         <p>Where I have worked and the roles I have held.</p>
       </div>
       <section className="flex flex-col items-center text-center gap-9 w-full xl:w-[1144px] xl:gap-25">
-        <div className="flex flex-col items-center text-center gap-9 w-full md:gap-7 xl:flex-row xl:gap-0 xl:justify-between">
+        <div className="flex flex-col items-center text-center gap-9 w-full md:gap-7 xl:flex-row xl:gap-0 xl:justify-between  xl:items-start">
           <div
             id="experience-slideshow"
             className="w-full h-[447px] flex flex-col xl:w-[581px] xl:h-[400px] min-w-0

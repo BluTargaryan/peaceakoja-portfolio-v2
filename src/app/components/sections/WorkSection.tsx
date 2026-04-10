@@ -86,7 +86,7 @@ xl:w-[1144px] xl:gap-25
 
    
       <div className="flex flex-col items-center text-center gap-9 w-full min-w-0
-      md:gap-7 xl:flex-row xl:gap-0 xl:justify-between
+      md:gap-7 xl:flex-row xl:gap-0 xl:justify-between  xl:items-start
       ">
         
         <div id="work-slideshow" className="w-full h-[447px] flex flex-col 

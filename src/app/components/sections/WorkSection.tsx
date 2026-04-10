@@ -95,7 +95,7 @@ xl:w-[1144px] xl:gap-25
       
           <div
             ref={scrollRef}
-            className="relative w-full  h-full flex items-center gap-6 overflow-x-scroll scroll-smooth snap-x snap-proximity
+            className="relative w-full  h-full flex items-center gap-6 overflow-x-scroll scrollbar-hide scroll-smooth snap-x snap-proximity
             md:gap-10
             "
           >

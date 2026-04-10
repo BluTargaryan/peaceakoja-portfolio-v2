@@ -31,6 +31,30 @@ body {
   font-family: var(--font-inter);
 }
 
+/* Firefox */
+* {
+  scrollbar-color: var(--text) var(--background);
+  scrollbar-width: thin;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
 
 h1{
   @apply text-3xl font-orbitron font-bold md:text-4xl xl:text-6xl;
@@ -54,4 +78,12 @@ button{
 
 .article a{
   @apply text-primary underline hover:text-accent ;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

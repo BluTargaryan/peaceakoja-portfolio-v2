@@ -113,7 +113,8 @@ const EducationSection = () => {
                   ref={(el) => {
                     itemRefs.current[i] = el;
                   }}
-                  className={`w-40 h-56 border-3 shrink-0 snap-center transition-all duration-300 ${currentTitle === entry.title ? "border-accent p-2.5 scale-110" : "border-text scale-90"}
+                  onClick={() => scrollItemToCenter(i)}
+                  className={`w-40 cursor-pointer h-56 border-3 shrink-0 snap-center transition-all duration-300 ${currentTitle === entry.title ? "border-accent p-2.5 scale-110" : "border-text scale-90"}
                   md:w-40 md:h-56
                     `}
                 >

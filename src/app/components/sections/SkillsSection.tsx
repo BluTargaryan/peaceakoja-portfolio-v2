@@ -117,7 +117,8 @@ const SkillsSection = () => {
                   ref={(el) => {
                     itemRefs.current[i] = el;
                   }}
-                  className={`shrink-0 snap-center h-15 transition-all duration-300 md:h-20 ${currentName === entry.name ? "scale-175" : ""}`}
+                  onClick={() => scrollItemToCenter(i)}
+                  className={`shrink-0 cursor-pointer snap-center h-15 transition-all duration-300 md:h-20 ${currentName === entry.name ? "scale-175" : ""}`}
                 >
                   {IMAGE_MAP[entry.image] && (
                     <Image

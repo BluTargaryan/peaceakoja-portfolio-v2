@@ -72,11 +72,31 @@ Blog articles are fetched from a **Google Sheet published as CSV**. Each row rep
 
 ---
 
+## Dynamic Wallpaper Background
+
+Every page load fetches a random wallpaper from the [Unsplash API](https://unsplash.com/developers) and applies it as a full-screen `background-image` on the `<body>`.
+
+**How it works:**
+
+1. On mount, `WallpaperBackground` (a client component in `layout.tsx`) checks `sessionStorage` for a cached wallpaper pair.
+2. If no cache exists, it calls the internal API route `/api/wallpaper` **twice in parallel** — once for `portrait` orientation (`regular` size) and once for `landscape` orientation (`full` size).
+3. The correct image is applied based on the current viewport width relative to a 1024px breakpoint:
+   - **< 1024px** → portrait image (mobile/tablet)
+   - **≥ 1024px** → landscape image (desktop)
+4. A `resize` event listener swaps the background image live if the user crosses the breakpoint.
+5. Both images are stored in `sessionStorage` under the key `wallpaper_cache`, so they persist across page navigations within the same session without re-fetching.
+6. A fixed attribution badge is rendered in the bottom-right corner crediting the photographer and linking to the photo on Unsplash.
+
+The `/api/wallpaper` route (`src/app/api/wallpaper/route.ts`) handles the Unsplash API call server-side, keeping the access key out of the client bundle. If `UNSPLASH_ACCESS_KEY` is missing or the API call fails, it returns `{ url: null }` and the body falls back to the CSS background color gracefully.
+
+---
+
 ## Environment Variables
 
 Create a `.env.local` file in the project root:
 
 ```env
+UNSPLASH_ACCESS_KEY="<your-unsplash-access-key>"
 SHEETS_BLOG_URL="<your-google-sheet-blog-csv-url>"
 ```
 
